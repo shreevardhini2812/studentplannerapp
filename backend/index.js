@@ -9,7 +9,9 @@ import timetableRoutes from "./routes/timetableRoutes.js";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://creative-sopapillas-211fa3.netlify.app/login'
+}));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
